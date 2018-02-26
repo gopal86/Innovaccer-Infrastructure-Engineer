@@ -16,7 +16,7 @@ if operating_system == "2":
             c=join((path_to_move),a[-1])
             if not os.path.exists(c):
                 os.makedirs(c)
-            shutil.move(b,c)
+            os.rename(b,c)
         else:
             continue
 
@@ -26,15 +26,17 @@ elif operating_system == "1":
     # onlyfiles = [f for f in listdir((path_to_desktop)) if isfile(join((path_to_desktop),f))]
     onlyfiles = [f for f in listdir(path_to_desktop) if isfile(join(path_to_desktop,f))]
     for i in onlyfiles:
+        i = i.strip()
         a =  i.split(".")
-        if a[-1]=="lnk":
-            continue
-        else:
+        if a[-1]!="lnk":
             b=join(path_to_desktop,i)
             c=join(path_to_move,a[-1])
             if not os.path.exists(c):
                 os.makedirs(c)
-            shutil.move(b,c)
+            os.rename(b,c)
+        else:
+            continue
+
     # pass
 else:
     print("Please Enter correctly 1 or 2 and run the script again")
