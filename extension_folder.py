@@ -16,7 +16,7 @@ if operating_system == "2":
             c=join((path_to_move),a[-1])
             if not os.path.exists(c):
                 os.makedirs(c)
-            os.rename(b,c)
+            shutil.move(b,c)
         else:
             continue
 
@@ -33,7 +33,7 @@ elif operating_system == "1":
             c=join(path_to_move,a[-1])
             if not os.path.exists(c):
                 os.makedirs(c)
-            os.rename(b,c)
+            shutil.move(b,c)
         else:
             continue
 

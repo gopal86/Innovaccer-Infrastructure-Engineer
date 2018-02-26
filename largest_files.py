@@ -11,8 +11,14 @@ def sizeof_fmt(num, suffix='B'):
         num /= 1000.0
     return "%.1f%s%s" % (num, 'Yi', suffix)
 
-list1 = [0,0,0,0,0,0,0,0,0,0]
-list2 = [0,0,0,0,0,0,0,0,0,0]
+# list1 = [0,0,0,0,0,0,0,0,0,0]
+# list2 = [0,0,0,0,0,0,0,0,0,0]
+list1=[]
+list2=[]
+for i in range(1,11):
+    list1.append(int(0))
+    list2.append(int(0))    
+
 walk_dir = []
 operating_system = input("Enter 1 if you are using linux and 2 if windows :- ")
 if operating_system == "2":
