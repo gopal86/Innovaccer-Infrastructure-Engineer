@@ -14,15 +14,15 @@ def sizeof_fmt(num, suffix='B'):
 list1 = [0,0,0,0,0,0,0,0,0,0]
 list2 = [0,0,0,0,0,0,0,0,0,0]
 walk_dir = []
-operating_system = input("Enter 1 if you are using windows and 2 if linux :- ")
-if operating_system == "1":
+operating_system = input("Enter 1 if you are using linux and 2 if windows :- ")
+if operating_system == "2":
 
     arr = ["A:" , "B:" ,"C:" ,"D:" ,"E:" ,"F:" ,"G:" ,"H:" ,"I:" ,"J:" ]
     for i in arr:
 
         if os.path.exists(i):
             walk_dir.append(i)
-elif operating_system == "2":
+elif operating_system == "1":
     walk_dir=['/home']
 else:
     print("Please Enter correctly 1 or 2 and run the script again")
